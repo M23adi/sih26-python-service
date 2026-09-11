@@ -1,0 +1,17 @@
+{
+  "detection_id": "det_20240315_001",
+  "timestamp": "2024-03-15T14:30:00Z",
+  "confidence": 0.87,
+  "is_lookalike_filtered": false,
+  "polygon": {
+    "type": "Polygon",
+    "coordinates": [[[72.61, 18.42], [72.625, 18.415], [72.635, 18.42], [72.64, 18.43], [72.635, 18.44], [72.625, 18.445], [72.615, 18.44], [72.61, 18.43], [72.61, 18.42]]]
+  },
+  "geometry": {
+    "area_km2": 12.4,
+    "perimeter_km": 15.2,
+    "centroid": { "lon": 72.62, "lat": 18.43 },
+    "aspect_ratio": 2.3,
+    "compactness": 0.6
+  }
+}

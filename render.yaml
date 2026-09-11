@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: sih26-python-service
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: USE_FALLBACK
+        value: "false"

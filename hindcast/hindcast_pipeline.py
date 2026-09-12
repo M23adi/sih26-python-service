@@ -200,6 +200,12 @@ def run_hindcast(request: HindcastRequest) -> HindcastResponse:
     center_lon = request.centroid.lon
     center_lat = request.centroid.lat
 
+    # Seed the random generators to ensure deterministic output per region
+    seed_str = request.detection_timestamp + str(center_lon) + str(center_lat)
+    seed_val = hash(seed_str) % (2**31)
+    random.seed(seed_val)
+    np.random.seed(seed_val)
+
     # ── Backward hindcast ──
     backward_endpoints = _run_ensemble(
         center_lon, center_lat,
